@@ -4,16 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polling App Flask</title>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        a.create-poll-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #28a745;
+            background-color: #fff;
+            border: 1px solid #28a745;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a.create-poll-link:hover {
+            background-color: #28a745;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <h3>Polls:</h3>    
-<ul>
-    {% for key, value in polls.iterrows() %}
-    <li><a href="{{ url_for('polls', id=key) }}">{{ value['poll'] }}</a></li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for key, value in polls.iterrows() %}
+        <li><a href="{{ url_for('polls', id=key) }}">{{ value['poll'] }}</a></li>
+        {% endfor %}
+    </ul>
 
-<a href="{{ url_for('create_polls')}}">Create New Poll</a>
-<!-- la? -->
+    <a class="create-poll-link" href="{{ url_for('create_polls')}}">Create New Poll</a>
 </body>
 </html>
+<!-- asd -->

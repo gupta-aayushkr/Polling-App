@@ -3,30 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New Poll</title>
-    
+    <!-- <title>Create New Poll</title> -->
+
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
     <h3>Create New Poll</h3>
     <form action="{{url_for('create_polls')}}" method="post">
         <label for="poll">
             Poll Text:
-            <input type="text", name="Poll", placeholder="Poll Text">
+            <input type="text" name="Poll" placeholder="Poll Text">
         </label>
         <label for="option1">
-            Poll Text:
-            <input type="text", name="option1", placeholder="Option 1">
+            Option 1:
+            <input type="text" name="option1" placeholder="Option 1">
         </label>
         <label for="option2">
-            Poll Text:
-            <input type="text", name="option2", placeholder="Option 2">
+            Option 2:
+            <input type="text" name="option2" placeholder="Option 2">
         </label>
         <label for="option3">
-            Poll Text:
-            <input type="text", name="option3", placeholder="Option 3">
+            Option 3:
+            <input type="text" name="option3" placeholder="Option 3">
         </label>
-<input type="submit" value="Create">
+        <input type="submit" value="Create">
     </form>
-
 </body>
 </html>
