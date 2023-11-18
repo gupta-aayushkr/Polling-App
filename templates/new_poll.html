@@ -57,9 +57,38 @@
         input[type="submit"]:hover {
             background-color: #218838;
         }
+
+        a {
+            text-decoration: none;
+            color: #28a745;
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+
+        a:hover {
+            color: #218838;
+        }
+
+        a.back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 20px;
+            font-size: 18px;
+            color: #dc3545;
+            background-color: #fff;
+            border: 1px solid #dc3545;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a.back-link:hover {
+            background-color: #dc3545;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
+    <div class="polls-container">
     <h3>Create New Poll</h3>
     <form action="{{url_for('create_polls')}}" method="post">
         <label for="poll">
@@ -80,5 +109,7 @@
         </label>
         <input type="submit" value="Create">
     </form>
+    <a class="back-link" href="{{url_for('index')}}">Back</a>
+</div>
 </body>
 </html>
