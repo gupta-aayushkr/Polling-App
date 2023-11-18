@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspect Poll Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        main {
+            text-align: center;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        b {
+            color: #007bff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #28a745;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #218838;
+        }
+
+        a.back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 20px;
+            font-size: 18px;
+            color: #dc3545;
+            background-color: #fff;
+            border: 1px solid #dc3545;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a.back-link:hover {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p><b>{{poll['option1']}}:</b> {{poll['vote1']}} <a href="{{ url_for('vote', id=poll.name, option=1) }}">Vote</a></p>
+        <p><b>{{poll['option2']}}:</b> {{poll['vote2']}} <a href="{{ url_for('vote', id=poll.name, option=2) }}">Vote</a></p>
+        <p><b>{{poll['option3']}}:</b> {{poll['vote3']}} <a href="{{ url_for('vote', id=poll.name, option=3) }}">Vote</a></p>
+        <a class="back-link" href="{{url_for('index')}}">Back</a>
+    </main>
+</body>
+</html>
