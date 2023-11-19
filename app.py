@@ -78,6 +78,7 @@ def vote(id, option):
         return render_template("repeat.html")
 
 
+
 @app.route("/clean")
 def clean():
     columns = ['poll_id', 'poll_name', 'poll_option_no', 'poll_option', 'poll_vote']

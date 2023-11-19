@@ -64,7 +64,7 @@
 <body>
     <main>
 
-        <h3>{{ poll['poll_name'][0] }}</h3>
+        <h3>{{ poll['poll_name'].values[0] }}</h3>
 
         {% for key, value in poll.iterrows() %}
         <p><b>{{value['poll_option']}}:</b> {{value['poll_vote']}} <a href="{{ url_for('vote', id=poll['poll_id'].values[0], option=value['poll_option_no']) }}">Vote</a></p>
