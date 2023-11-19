@@ -68,14 +68,16 @@ def create_polls():
 
 @app.route("/vote/<id>/<option>")
 def vote(id, option):
-    if request.cookies.get(f"vote_{id}_cookie") is None:
+    # if request.cookies.get(f"vote_{id}_cookie") is None:
+        polls_df = pd.read_csv("poll_test.csv")
         polls_df.loc[(polls_df['poll_id'] == int(id)) & (polls_df['poll_option_no'] == int(option)), 'poll_vote'] += 1
         polls_df.to_csv("poll_test.csv")
-        response = make_response(redirect(url_for("polls", id=id)))
-        response.set_cookie(f"vote_{id}_cookie", str(option))
-        return response
-    else:
-        return render_template("repeat.html")
+        return redirect(url_for("polls", id=id))
+        # response = make_response(redirect(url_for("polls", id=id)))
+        # response.set_cookie(f"vote_{id}_cookie", str(option))
+        # return response
+    # else:
+        # return render_template("repeat.html")
 
 
 
