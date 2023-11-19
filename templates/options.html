@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No of Options</title>
+</head>
+
+<style>
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+        color: #495057;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #218838;
+    }
+
+    a {
+        text-decoration: none;
+        color: #28a745;
+        transition: color 0.3s ease;
+        text-align: center;
+    }
+
+    a:hover {
+        color: #218838;
+    }
+
+    a.back-link {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 20px;
+        font-size: 18px;
+        color: #dc3545;
+        background-color: #fff;
+        border: 1px solid #dc3545;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    a.back-link:hover {
+        background-color: #dc3545;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="Options_centre">
+    <h3>No. of Options in Poll</h3>
+    <form action="{{url_for('options')}}" method="post">
+        <label for="poll">
+            Enter (Number):
+            <input type="number" name="Number" placeholder="No. of Options in Poll">
+        </label>
+        <input type="submit" value="Create">
+    </form>
+    <a class="back-link" href="{{url_for('index')}}">Back</a>
+</div>
+</body>
+</html>

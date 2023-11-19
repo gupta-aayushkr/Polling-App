@@ -95,21 +95,15 @@
             Poll Text:
             <input type="text" name="Poll" placeholder="Poll Text">
         </label>
-        <label for="option1">
-            Option 1:
-            <input type="text" name="option1" placeholder="Option 1">
-        </label>
-        <label for="option2">
-            Option 2:
-            <input type="text" name="option2" placeholder="Option 2">
-        </label>
-        <label for="option3">
-            Option 3:
-            <input type="text" name="option3" placeholder="Option 3">
-        </label>
+            {% for i in range(1, no_of_options + 1) %}
+                    <label for="option{{ i }}">
+                        Option {{ i }}:
+                        <input type="text" name="option{{ i }}" placeholder="Option {{ i }}">
+                    </label>
+            {% endfor %}
         <input type="submit" value="Create">
     </form>
-    <a class="back-link" href="{{url_for('index')}}">Back</a>
+    <a class="back-link" href="{{url_for('options')}}">Back</a>
 </div>
 </body>
 </html>

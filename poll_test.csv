@@ -1,0 +1,31 @@
+,poll_id,poll_name,poll_option_no,poll_option,poll_vote
+0,1,Best Game,1,a,0
+1,1,Best Game,2,b,0
+2,1,Best Game,3,g,0
+3,1,Best Game,4,d,0
+4,1,Best Game,5,r,0
+5,1,Best Game,6,y,0
+0,2,Best Game,1,aBb,0
+1,2,Best Game,2,B,0
+2,2,Best Game,3,B,0
+3,2,Best Game,4,B,0
+4,2,Best Game,5,B,0
+5,2,Best Game,6,B,0
+6,2,Best Game,7,B,0
+7,2,Best Game,8,B,0
+8,2,Best Game,9,BB,0
+0,3,Best Game,1,a,0
+1,3,Best Game,2,b,0
+0,4,Best Game,1,a,0
+1,4,Best Game,2,b,0
+2,4,Best Game,3,c,0
+3,4,Best Game,4,d,0
+4,4,Best Game,5,e,0
+5,4,Best Game,6,g,0
+0,5,Modi,1,a,0
+1,5,Modi,2,b,0
+2,5,Modi,3,c,0
+0,6,Poll1,1,a,0
+1,6,Poll1,2,b,0
+2,6,Poll1,3,c,0
+3,6,Poll1,4,d,0
