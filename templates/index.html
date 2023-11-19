@@ -80,7 +80,7 @@
         
     <ul>
         {% for key, value in polls.iterrows() %}
-        <li><a href="{{ url_for('polls', id=key) }}">{{ value['poll_name'] }}</a></li>
+        <li><a href="{{ url_for('polls', id=key+1) }}">{{ value['poll_name'] }}</a></li>
         {% endfor %}
     </ul>
 
